@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+    color: #003366;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+ display:flex;
+ justify-content: flex-end;
+ align-items: center;
+ padding: 30px 10%;
+ background-color: rgb(0, 51, 102);
+}
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+.navlinks {
+    list-style: none;
+}
+.navlinks li {
+    display:  inline-block;
+    padding:  0px 20px;
+}
+.navlinks li a {
+    transition:  all 0.3s ease 0s;
+  
+}
+.navlinks li a:hover {
+    color: cyan;
+}
+header img {
+    height: 65px;
+    margin-right: 15px;
+}
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(33, 158, 188,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgb(102, 153, 204,0.8);
+}
+li, a, button {
+    font-family:monospace;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+/* School Description Section */
+.school-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #e6f2ff;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+
+/* Text Content Limited to Half Width */
+.description-content {
+    flex: 1;
+    max-width: 50%; /* Limits text section to half the width */
+    padding-right: 10px;
+}
+
+.description-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+   
+}
+
+.description-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    text-align: justify;
+   
+}
+
+/* Centered Image on the Right */
+.description-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.description-image img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Vision, Mission, and Quality Policy Styles with Image */
+.vision-mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.vision-mission-content {
+    flex: 1;
+    padding-right: 40px;
+    text-align: justify;
+    font-family: monospace;
+}
+
+.vision-mission h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vision-mission p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.vision-mission-image img {
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Senior High School Strands Section */
+.container {
+    width: 100%;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+}
+.container img {
+    width: 300px;
+    padding-top: 100px;
+}
+footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 16px;
+    background-color: #650000;
+}
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: gold;
+}
+.card-content p {
+    color: gold;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;  
+    color: #fff;     
+}
