@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starborn | Student Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay"></div>
+    <div id="star-container"></div>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">++ STARFORGE ++</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rpw">RPW</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>STARBORN<br>ENTITY</h1>
+        <p>SYSTEM LOG: STUDENT PORTFOLIO ONLINE.</p>
+        <br>
+        <a href="#about" class="btn">INITIALIZE DATA</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">ABOUT_ME</h2>
+        <div class="solid-panel">
+            <p>
+                > INITIALIZING BIOGRAPHY SEQUENCE...
+            </p>
+            <p>
+                Hello. I am a CyberSecruity Student from TQ01
+            </p>
+            <p>
+                STATUS: READY FOR EVALUATION.
+            </p>
+        </div>
+    </section>
+
+    <section id="rpw">
+        <h2 class="section-title">READING_PROCESS_WORKSHEET</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <iframe src="Flipped Act 1 English.pdf" class="pdf-container" title="RPW 1"></iframe>
+                <div class="project-content">
+                    <h3>Worksheet Alpha</h3>
+                    <p>Initial text analysis, vocabulary breakdown, and primary annotations.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <iframe src="Flipped  Act 2 English-1.pdf" class="pdf-container" title="RPW 2"></iframe>
+                <div class="project-content">
+                    <h3>Worksheet Beta</h3>
+                    <p>Exploration of thematic elements and character motivations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form">
+        <h2 class="section-title">RESPONSE_FORM</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <iframe src="response-form-1.pdf" class="pdf-container" title="Response Form 1"></iframe>
+                <div class="project-content">
+                    <h3>Response Alpha</h3>
+                    <p>First critical synthesis and recorded response to the assigned reading.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <iframe src="response-form-2.pdf" class="pdf-container" title="Response Form 2"></iframe>
+                <div class="project-content">
+                    <h3>Response Beta</h3>
+                    <p>Second critical synthesis and recorded response to the assigned reading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 STARFORGE. END OF LINE.</p>
+    </footer>
+
+    <script>
+        const container = document.getElementById('star-container');
+
+        function generateDotStars() {
+            const count = 100;
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.classList.add('dot-star');
+                
+                star.style.width = Math.random() > 0.5 ? '1px' : '2px';
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                
+                star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+
+                container.appendChild(star);
+            }
+        }
+
+        function generateCrossStars() {
+            const count = 8;
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.classList.add('cross-star');
+                
+                star.style.left = `${Math.random() * 90 + 5}vw`;
+                star.style.top = `${Math.random() * 90 + 5}vh`;
+                
+                star.style.animationDuration = `${Math.random() * 5 + 4}s`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+
+                container.appendChild(star);
+            }
+        }
+
+        function spawnShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.classList.add('shooting-star');
+
+            const top = Math.random() * 50; 
+            const right = Math.random() * 50; 
+            
+            shootingStar.style.top = `${top}vh`;
+            shootingStar.style.right = `${right}vw`;
+
+            container.appendChild(shootingStar);
+
+            setTimeout(() => {
+                shootingStar.remove();
+            }, 2100);
+
+            const nextSpawnDelay = Math.random() * 6000 + 4000;
+            setTimeout(spawnShootingStar, nextSpawnDelay);
+        }
+
+        window.onload = () => {
+            generateDotStars();
+            generateCrossStars();
+            
+            setTimeout(spawnShootingStar, 3000);
+        };
+    </script>
+</body>
+</html>
